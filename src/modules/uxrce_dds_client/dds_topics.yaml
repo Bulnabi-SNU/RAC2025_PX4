@@ -101,6 +101,11 @@ publications:
     type: px4_msgs::msg::Wind
     rate_limit: 1.
 
+  # CUSTOM TOPICS
+
+  - topic: /fmu/out/mission_result
+    type: px4_msgs::msg::MissionResult
+
 # Create uORB::Publication
 subscriptions:
   - topic: /fmu/in/register_ext_component_request
@@ -213,6 +218,9 @@ subscriptions:
 
   - topic: /fmu/in/rover_steering_setpoint
     type: px4_msgs::msg::RoverSteeringSetpoint
+
+  - topic: /fmu/in/gimbal_manager_set_attitude
+    type: px4_msgs::msg::GimbalManagerSetAttitude
 
 # Create uORB::PublicationMulti
 subscriptions_multi:
